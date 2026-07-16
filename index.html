@@ -14,7 +14,7 @@
     --gold:#c9a96a; --gold-2:#e6c98a; --gold-glow:rgba(201,169,106,0.35);
     --radius:18px; --max:1240px;
     --pad-x:32px;
-  }
+  } 
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
   body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;cursor:none;
@@ -349,6 +349,12 @@
     background:rgba(201,169,106,.05);
   }
   
+  .project-link-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
   .project-link{
     display:inline-flex;
     align-items:center;
@@ -614,7 +620,8 @@
         <p class="lead">I'm Gunjan Kelshikar — a driven engineering student pursuing two degrees while crafting clean, responsive websites and interactive experiences through structured professional training.</p>
         <div class="hero-ctas">
           <a href="#work" class="btn btn-primary">View My Projects <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-          <a href="#contact" class="btn btn-ghost">Get in Touch</a>
+          <!-- NEW: Download Resume Button -->
+          <a href="resume.pdf" target="_blank" class="btn btn-ghost">Download Resume <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a>
         </div>
       </div>
       <div class="hero-visual reveal">
@@ -640,8 +647,16 @@
       <div class="about-text reveal">
         <h3>Code. Create. Deploy.</h3>
         <p>I'm currently pursuing <strong style="color:var(--text)">two engineering degrees simultaneously — Civil Engineering and Computer Science & Engineering</strong>. Balancing both disciplines has sharpened my problem-solving skills and given me a unique perspective on design and structure.</p>
+        
+        <!-- Visual Quote Block - Separated from regular text -->
+        <div style="border-left: 3px solid var(--gold); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--gold);">
+          "Just as a civil engineer never builds on weak foundations, I don't build software without clean architecture and scalable code."
+        </div>
+        
         <p>Alongside my college curriculum, I'm undergoing <strong style="color:var(--text)">intensive professional web development training</strong>, where I've mastered <strong style="color:var(--text)">HTML, CSS, JavaScript, Bootstrap, Python, and XAMPP</strong>. Every project I ship — from a full food ordering website to browser-based games — is a testament to this structured learning journey.</p>
-        <p>Beyond coding, I'm certified in <strong style="color:var(--text)">Advanced MS Excel and MS Word</strong>, giving me a strong foundation in data handling and documentation — skills that complement my technical work beautifully.</p><i><p><strong style="color:var(--text)">I approach software development with a civil engineer's mindset: building robust data foundations, drafting clean system architectures, and writing code with structural integrity.</strong></p></i>
+        
+        <p>Beyond coding, I'm certified in <strong style="color:var(--text)">Advanced MS Excel and MS Word</strong>, giving me a strong foundation in data handling and documentation — skills that complement my technical work beautifully.</p>
+        
         <div class="stats">
           <div class="stat"><div class="num">4+</div><div class="lbl">Projects</div></div>
           <div class="stat"><div class="num">4</div><div class="lbl">Deployed Live</div></div>
@@ -725,7 +740,11 @@
             <span class="tech-chip">JavaScript</span>
             <span class="tech-chip">Bootstrap</span>
           </div>
-          <a href="https://thehungryhub.netlify.app/" target="_blank" class="project-link">Visit Live <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <!-- UPDATED: Added GitHub Link -->
+          <div class="project-link-group">
+             <a href="https://thehungryhub.netlify.app/" target="_blank" class="project-link">Visit Live <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+             <a href="#" target="_blank" class="project-link" style="border-color:var(--muted); color:var(--muted)">View Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
+          </div>
         </div>
       </div>
       
@@ -747,7 +766,11 @@
             <span class="tech-chip">Canvas</span>
             <span class="tech-chip">JavaScript</span>
           </div>
-          <a href="https://starship-wars.netlify.app/" target="_blank" class="project-link">Play Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <!-- UPDATED: Added GitHub Link -->
+          <div class="project-link-group">
+            <a href="https://starship-wars.netlify.app/" target="_blank" class="project-link">Play Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="#" target="_blank" class="project-link" style="border-color:var(--muted); color:var(--muted)">View Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
+          </div>
         </div>
       </div>
       
@@ -769,7 +792,11 @@
             <span class="tech-chip">CSS3</span>
             <span class="tech-chip">JavaScript</span>
           </div>
-          <a href="https://clashofblades.netlify.app/" target="_blank" class="project-link">Play Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <!-- UPDATED: Added GitHub Link -->
+          <div class="project-link-group">
+            <a href="https://clashofblades.netlify.app/" target="_blank" class="project-link">Play Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="#" target="_blank" class="project-link" style="border-color:var(--muted); color:var(--muted)">View Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
+          </div>
         </div>
       </div>
       
@@ -792,7 +819,11 @@
             <span class="tech-chip">JavaScript</span>
             <span class="tech-chip">LocalStorage</span>
           </div>
-          <a href="https://ojas-skincare.netlify.app/" target="_blank" class="project-link">Visit Live <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+          <!-- UPDATED: Added GitHub Link -->
+          <div class="project-link-group">
+            <a href="https://ojas-skincare.netlify.app/" target="_blank" class="project-link">Visit Live <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="#" target="_blank" class="project-link" style="border-color:var(--muted); color:var(--muted)">View Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
+          </div>
         </div>
       </div>
       
@@ -882,14 +913,14 @@
         <h2>Let's build something <span class="italic">together</span>.</h2>
         <p>As a dual engineering student and aspiring developer, I'm eager to learn, contribute, and grow. Whether it's an internship, freelance project, or collaboration — I'd love to hear from you.</p>
         <ul class="contact-details">
-          <li><span class="lbl">Email</span><span class="val">gunjankelshikar@gmail.com</span></li>
+          <li><span class="lbl">Email</span><span class="val">gunjankelshikar2007@gmail.com</span></li>
           <li><span class="lbl">Location</span><span class="val">India</span></li>
           <li><span class="lbl">Status</span><span class="val">Open to Opportunities</span></li>
         </ul>
         <div class="socials">
           <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
           <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 014 0v4M12 13v4"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://www.instagram.com/_theyhates_gunjan_/" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
           <a href="#" aria-label="Netlify"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 19h20L12 2zM12 8v6M12 17v.01"/></svg></a>
         </div>
       </div>

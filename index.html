@@ -81,7 +81,6 @@
   .hero-badge .value{font-family:'Playfair Display',serif;font-size:clamp(16px,1.8vw,20px);margin-top:4px}
   .hero-badge .dot{width:8px;height:8px;border-radius:50%;background:#4ade80;box-shadow:0 0 12px #4ade80;flex-shrink:0}
   .scroll-indicator{position:absolute;bottom:clamp(20px,3vw,40px);left:50%;transform:translateX(-50%);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:12px}
-  .scroll-indicator::after{content:"";width:1px;height:40px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollLine 2s ease-in-out infinite}
   @keyframes scrollLine{0%,100%{transform:scaleY(.3);transform-origin:top}50%{transform:scaleY(1)}}
 
   .section-head{margin-bottom:clamp(40px,6vw,80px);max-width:720px}
@@ -90,52 +89,11 @@
   .section-head p{color:var(--muted);font-size:clamp(14px,1.5vw,17px)}
 
   .about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(30px,5vw,80px);align-items:center}
-  .about-img{
-    aspect-ratio:3/4;
-    border-radius:var(--radius);
-    position:relative;
-    overflow:hidden;
-    background:linear-gradient(135deg,#1a1a1f,#0d0d10);
-    border:1px solid var(--border);
-    max-width:450px;
-    width:100%;
-    justify-self:center;
-  }
-  .about-img .about-photo{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center top;
-    display:block;
-    position:relative;
-    z-index:1;
-    transition:transform .6s ease;
-  }
-  .about-img:hover .about-photo{
-    transform:scale(1.05);
-  }
-  .about-img::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background: 
-      radial-gradient(circle at 50% 30%, rgba(201,169,106,.25), transparent 60%),
-      linear-gradient(to top, rgba(10,10,12,0.95) 0%, rgba(10,10,12,0.5) 35%, transparent 65%);
-    z-index:2;
-    pointer-events:none;
-  }
-  .about-img .sig{
-    position:absolute;
-    bottom:clamp(20px,2.5vw,30px);
-    left:clamp(20px,2.5vw,30px);
-    right:clamp(20px,2.5vw,30px);
-    font-family:'Playfair Display',serif;
-    font-style:italic;
-    font-size:clamp(20px,2.5vw,28px);
-    color:var(--gold);
-    z-index:3;
-    text-shadow: 0 4px 15px rgba(0,0,0,0.8);
-  }
+  .about-img{aspect-ratio:3/4;border-radius:var(--radius);position:relative;overflow:hidden;background:linear-gradient(135deg,#1a1a1f,#0d0d10);border:1px solid var(--border);max-width:450px;width:100%;justify-self:center}
+  .about-img .about-photo{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;position:relative;z-index:1;transition:transform .6s ease}
+  .about-img:hover .about-photo{transform:scale(1.05)}
+  .about-img::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 30%, rgba(201,169,106,.25), transparent 60%),linear-gradient(to top, rgba(10,10,12,0.95) 0%, rgba(10,10,12,0.5) 35%, transparent 65%);z-index:2;pointer-events:none}
+  .about-img .sig{position:absolute;bottom:clamp(20px,2.5vw,30px);left:clamp(20px,2.5vw,30px);right:clamp(20px,2.5vw,30px);font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(20px,2.5vw,28px);color:var(--gold);z-index:3;text-shadow: 0 4px 15px rgba(0,0,0,0.8)}
   .about-text h3{font-size:clamp(24px,3vw,32px);margin-bottom:clamp(12px,2vw,20px)}
   .about-text p{color:var(--muted);margin-bottom:clamp(14px,2vw,20px);font-size:clamp(14px,1.4vw,16px)}
   .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.5vw,24px);margin-top:clamp(24px,3vw,40px)}
@@ -152,253 +110,61 @@
   .skill h3{font-size:clamp(17px,1.8vw,20px);margin-bottom:10px}
   .skill p{color:var(--muted);font-size:clamp(12px,1.2vw,13px)}
 
-  /* ===== PROJECTS WITH IMAGES ===== */
   #work{position:relative}
-  #work::before{
-    content:"";position:absolute;inset:0;
-    background-image:radial-gradient(rgba(201,169,106,.15) 1px, transparent 1px);
-    background-size:30px 30px;
-    opacity:.3;pointer-events:none;
-    mask-image:radial-gradient(ellipse 80% 60% at 50% 40%, #000 40%, transparent 100%);
-    -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 40%, #000 40%, transparent 100%);
-  }
+  #work::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(201,169,106,.15) 1px, transparent 1px);background-size:30px 30px;opacity:.3;pointer-events:none;mask-image:radial-gradient(ellipse 80% 60% at 50% 40%, #000 40%, transparent 100%);-webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 40%, #000 40%, transparent 100%)}
   .filters{display:flex;gap:8px;margin-bottom:clamp(30px,4vw,50px);flex-wrap:wrap;position:relative;z-index:2}
   .filter{padding:10px 20px;border:1px solid var(--border);border-radius:999px;font-size:12px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);background:transparent;cursor:none;transition:all .3s;min-height:44px;display:inline-flex;align-items:center}
   .filter.active,.filter:hover{border-color:var(--gold);color:var(--gold)}
   
   .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2.5vw,30px);position:relative;z-index:2}
   
-  .project{
-    position:relative;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;
-    cursor:none;background:linear-gradient(135deg,#1a1a1f,#0d0d10);
-    transition:transform .5s cubic-bezier(.2,.9,.3,1), box-shadow .5s ease;
-    transform-style:preserve-3d;
-    border:1px solid var(--border);
-    will-change:transform;
-  }
-  .project::before{
-    content:"";position:absolute;inset:-2px;z-index:0;border-radius:var(--radius);
-    background:conic-gradient(from 0deg, transparent 0%, var(--gold) 25%, transparent 50%, var(--gold-2) 75%, transparent 100%);
-    opacity:0;transition:opacity .5s ease;
-    animation:rotateBorder 4s linear infinite;
-  }
-  .project::after{
-    content:"";position:absolute;inset:1px;z-index:1;border-radius:calc(var(--radius) - 1px);
-    background:linear-gradient(135deg,#1a1a1f,#0d0d10);
-  }
+  .project{position:relative;aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;cursor:none;background:linear-gradient(135deg,#1a1a1f,#0d0d10);transition:transform .5s cubic-bezier(.2,.9,.3,1), box-shadow .5s ease;transform-style:preserve-3d;border:1px solid var(--border);will-change:transform}
+  .project::before{content:"";position:absolute;inset:-2px;z-index:0;border-radius:var(--radius);background:conic-gradient(from 0deg, transparent 0%, var(--gold) 25%, transparent 50%, var(--gold-2) 75%, transparent 100%);opacity:0;transition:opacity .5s ease;animation:rotateBorder 4s linear infinite}
+  .project::after{content:"";position:absolute;inset:1px;z-index:1;border-radius:calc(var(--radius) - 1px);background:linear-gradient(135deg,#1a1a1f,#0d0d10)}
   @keyframes rotateBorder{to{transform:rotate(360deg)}}
   .project:hover::before{opacity:1}
   .project:hover{box-shadow:0 30px 60px -20px rgba(201,169,106,.25), 0 0 0 1px rgba(201,169,106,.2)}
   
-  .project .spotlight{
-    position:absolute;inset:0;z-index:2;pointer-events:none;
-    background:radial-gradient(400px circle at var(--mx,50%) var(--my,50%), rgba(201,169,106,.15), transparent 40%);
-    opacity:0;transition:opacity .4s ease;
-    border-radius:var(--radius);
-  }
+  .project .spotlight{position:absolute;inset:0;z-index:2;pointer-events:none;background:radial-gradient(400px circle at var(--mx,50%) var(--my,50%), rgba(201,169,106,.15), transparent 40%);opacity:0;transition:opacity .4s ease;border-radius:var(--radius)}
   .project:hover .spotlight{opacity:1}
   
-  /* Project Image Container */
-  .project .project-image{
-    position:absolute;
-    inset:1px;
-    z-index:3;
-    border-radius:calc(var(--radius) - 1px);
-    overflow:hidden;
-  }
+  .project .project-image{position:absolute;inset:1px;z-index:3;border-radius:calc(var(--radius) - 1px);overflow:hidden}
+  .project .project-image img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .6s ease, filter .4s ease;filter:grayscale(20%) brightness(0.9)}
+  .project:hover .project-image img{transform:scale(1.08);filter:grayscale(0%) brightness(1)}
   
-  .project .project-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:center;
-    transition:transform .6s ease, filter .4s ease;
-    filter:grayscale(20%) brightness(0.9);
-  }
+  .project .project-overlay{position:absolute;inset:1px;z-index:4;border-radius:calc(var(--radius) - 1px);background:linear-gradient(to top, rgba(10,10,12,0.95) 0%, rgba(10,10,12,0.7) 40%, rgba(10,10,12,0.3) 70%, transparent 100%);transition:opacity .4s ease}
   
-  .project:hover .project-image img{
-    transform:scale(1.08);
-    filter:grayscale(0%) brightness(1);
-  }
+  .project .thumb{position:absolute;inset:0;z-index:5;display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(32px,5vw,60px);color:rgba(201,169,106,.3);transition:all .6s ease;text-align:center;padding:20px;text-shadow:0 4px 20px rgba(0,0,0,0.8)}
+  .project:hover .thumb{opacity:0;transform:scale(0.9)}
   
-  /* Dark overlay on project image */
-  .project .project-overlay{
-    position:absolute;
-    inset:1px;
-    z-index:4;
-    border-radius:calc(var(--radius) - 1px);
-    background:linear-gradient(to top, rgba(10,10,12,0.95) 0%, rgba(10,10,12,0.7) 40%, rgba(10,10,12,0.3) 70%, transparent 100%);
-    transition:opacity .4s ease;
-  }
+  .project .num-badge{position:absolute;top:20px;left:20px;z-index:10;font-family:'Playfair Display',serif;font-style:italic;font-size:14px;color:var(--gold);padding:6px 14px;background:rgba(10,10,12,.8);backdrop-filter:blur(10px);border:1px solid rgba(201,169,106,.3);border-radius:999px;letter-spacing:.1em}
   
-  .project .thumb{
-    position:absolute;
-    inset:0;
-    z-index:5;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-family:'Playfair Display',serif;
-    font-style:italic;
-    font-size:clamp(32px,5vw,60px);
-    color:rgba(201,169,106,.3);
-    transition:all .6s ease;
-    text-align:center;
-    padding:20px;
-    text-shadow:0 4px 20px rgba(0,0,0,0.8);
-  }
-  
-  .project:hover .thumb{
-    opacity:0;
-    transform:scale(0.9);
-  }
-  
-  .project .num-badge{
-    position:absolute;
-    top:20px;
-    left:20px;
-    z-index:10;
-    font-family:'Playfair Display',serif;
-    font-style:italic;
-    font-size:14px;
-    color:var(--gold);
-    padding:6px 14px;
-    background:rgba(10,10,12,.8);
-    backdrop-filter:blur(10px);
-    border:1px solid rgba(201,169,106,.3);
-    border-radius:999px;
-    letter-spacing:.1em;
-  }
-  
-  .project .featured-badge{
-    position:absolute;
-    top:20px;
-    right:20px;
-    z-index:10;
-    font-size:10px;
-    letter-spacing:.2em;
-    text-transform:uppercase;
-    color:#0a0a0c;
-    background:var(--gold);
-    padding:6px 12px;
-    border-radius:999px;
-    font-weight:600;
-    display:flex;
-    align-items:center;
-    gap:6px;
-  }
+  .project .featured-badge{position:absolute;top:20px;right:20px;z-index:10;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#0a0a0c;background:var(--gold);padding:6px 12px;border-radius:999px;font-weight:600;display:flex;align-items:center;gap:6px}
   .project .featured-badge::before{content:"★";font-size:10px}
   
-  .project-info{
-    position:absolute;
-    bottom:0;
-    left:0;
-    right:0;
-    z-index:10;
-    padding:clamp(18px,2vw,28px);
-    background:linear-gradient(to top,rgba(10,10,12,.98) 0%,rgba(10,10,12,.9) 60%,transparent 100%);
-    transform:translateY(20px);
-    opacity:0;
-    transition:all .5s cubic-bezier(.2,.9,.3,1);
-  }
+  .project-info{position:absolute;bottom:0;left:0;right:0;z-index:10;padding:clamp(18px,2vw,28px);background:linear-gradient(to top,rgba(10,10,12,.98) 0%,rgba(10,10,12,.9) 60%,transparent 100%);transform:translateY(20px);opacity:0;transition:all .5s cubic-bezier(.2,.9,.3,1)}
+  .project:hover .project-info{transform:translateY(0);opacity:1}
   
-  .project:hover .project-info{
-    transform:translateY(0);
-    opacity:1;
-  }
+  .project-info .cat{font-size:clamp(9px,1vw,11px);letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:8px}
+  .project-info .cat::before{content:"";width:20px;height:1px;background:var(--gold)}
+  .project-info h3{font-size:clamp(18px,2vw,24px);margin:8px 0}
+  .project-info p{font-size:clamp(12px,1.3vw,14px);color:var(--muted);margin-bottom:14px}
   
-  .project-info .cat{
-    font-size:clamp(9px,1vw,11px);
-    letter-spacing:.2em;
-    text-transform:uppercase;
-    color:var(--gold);
-    display:flex;
-    align-items:center;
-    gap:8px;
-  }
-  .project-info .cat::before{
-    content:"";
-    width:20px;
-    height:1px;
-    background:var(--gold);
-  }
-  .project-info h3{
-    font-size:clamp(18px,2vw,24px);
-    margin:8px 0;
-  }
-  .project-info p{
-    font-size:clamp(12px,1.3vw,14px);
-    color:var(--muted);
-    margin-bottom:14px;
-  }
+  .tech-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+  .tech-chip{font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:4px 10px;border:1px solid rgba(201,169,106,.3);border-radius:999px;color:var(--gold-2);background:rgba(201,169,106,.05)}
   
-  .tech-chips{
-    display:flex;
-    flex-wrap:wrap;
-    gap:6px;
-    margin-bottom:14px;
-  }
-  .tech-chip{
-    font-size:10px;
-    letter-spacing:.1em;
-    text-transform:uppercase;
-    padding:4px 10px;
-    border:1px solid rgba(201,169,106,.3);
-    border-radius:999px;
-    color:var(--gold-2);
-    background:rgba(201,169,106,.05);
-  }
+  .project-link-group {display: flex;gap: 10px;flex-wrap: wrap}
+  .project-link{display:inline-flex;align-items:center;gap:8px;font-size:clamp(10px,1.1vw,12px);letter-spacing:.15em;text-transform:uppercase;color:var(--gold);padding:8px 16px;border:1px solid var(--gold);border-radius:999px;transition:all .3s;min-height:36px}
+  .project-link:hover{background:var(--gold);color:#0a0a0c}
+  .project-link svg{width:12px;height:12px}
   
-  .project-link-group {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-  }
-
-  .project-link{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    font-size:clamp(10px,1.1vw,12px);
-    letter-spacing:.15em;
-    text-transform:uppercase;
-    color:var(--gold);
-    padding:8px 16px;
-    border:1px solid var(--gold);
-    border-radius:999px;
-    transition:all .3s;
-    min-height:36px;
-  }
-  .project-link:hover{
-    background:var(--gold);
-    color:#0a0a0c;
-  }
-  .project-link svg{
-    width:12px;
-    height:12px;
-  }
+  .project.featured{grid-column:1 / -1;aspect-ratio:21/9}
+  .project.featured .thumb{font-size:clamp(48px,7vw,90px)}
   
-  .project.featured{
-    grid-column:1 / -1;
-    aspect-ratio:21/9;
-  }
-  .project.featured .thumb{
-    font-size:clamp(48px,7vw,90px);
-  }
+  .project.coming-soon .project-info{opacity:1;transform:translateY(0)}
+  .project.coming-soon .project-link{opacity:.5;pointer-events:none}
+  .project.coming-soon .project-image img{filter:grayscale(100%) brightness(0.5)}
   
-  .project.coming-soon .project-info{
-    opacity:1;
-    transform:translateY(0);
-  }
-  .project.coming-soon .project-link{
-    opacity:.5;
-    pointer-events:none;
-  }
-  .project.coming-soon .project-image img{
-    filter:grayscale(100%) brightness(0.5);
-  }
-  
-  /* CERTIFICATES */
   .certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,24px)}
   .cert{padding:clamp(24px,3vw,36px);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);transition:all .4s ease;position:relative}
   .cert:hover{transform:translateY(-6px);border-color:rgba(201,169,106,.3)}
@@ -454,57 +220,13 @@
   .reveal{opacity:0;transform:translateY(40px);transition:opacity 1s ease, transform 1s ease}
   .reveal.in{opacity:1;transform:translateY(0)}
 
-  .scroll-top{
-    position:fixed;
-    bottom:clamp(20px,3vw,40px);
-    right:clamp(20px,3vw,40px);
-    width:52px;
-    height:52px;
-    border-radius:50%;
-    background:var(--gold);
-    color:#0a0a0c;
-    border:none;
-    cursor:pointer;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    z-index:99;
-    opacity:0;
-    visibility:hidden;
-    transform:translateY(20px);
-    transition:all .4s cubic-bezier(.2,.9,.3,1);
-    box-shadow:0 8px 24px rgba(201,169,106,.3);
-  }
-  .scroll-top.show{
-    opacity:1;
-    visibility:visible;
-    transform:translateY(0);
-  }
-  .scroll-top:hover{
-    background:var(--gold-2);
-    transform:translateY(-4px);
-    box-shadow:0 12px 32px rgba(201,169,106,.4);
-  }
-  .scroll-top:active{
-    transform:translateY(-2px);
-  }
-  .scroll-top svg{
-    width:20px;
-    height:20px;
-    transition:transform .3s ease;
-  }
-  .scroll-top:hover svg{
-    transform:translateY(-2px);
-  }
-  .scroll-top::before{
-    content:"";
-    position:absolute;
-    inset:-3px;
-    border-radius:50%;
-    background:conic-gradient(var(--gold) var(--scroll-progress,0%), transparent 0%);
-    opacity:.3;
-    z-index:-1;
-  }
+  .scroll-top{position:fixed;bottom:clamp(20px,3vw,40px);right:clamp(20px,3vw,40px);width:52px;height:52px;border-radius:50%;background:var(--gold);color:#0a0a0c;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:99;opacity:0;visibility:hidden;transform:translateY(20px);transition:all .4s cubic-bezier(.2,.9,.3,1);box-shadow:0 8px 24px rgba(201,169,106,.3)}
+  .scroll-top.show{opacity:1;visibility:visible;transform:translateY(0)}
+  .scroll-top:hover{background:var(--gold-2);transform:translateY(-4px);box-shadow:0 12px 32px rgba(201,169,106,.4)}
+  .scroll-top:active{transform:translateY(-2px)}
+  .scroll-top svg{width:20px;height:20px;transition:transform .3s ease}
+  .scroll-top:hover svg{transform:translateY(-2px)}
+  .scroll-top::before{content:"";position:absolute;inset:-3px;border-radius:50%;background:conic-gradient(var(--gold) var(--scroll-progress,0%), transparent 0%);opacity:.3;z-index:-1}
 
   @media (min-width:1400px){:root{--max:1320px}}
   @media (max-width:1200px){.skills-grid{grid-template-columns:repeat(2,1fr)}}
@@ -519,8 +241,7 @@
     .project.featured{aspect-ratio:4/3}
     .nav-links{display:none}
     .burger{display:flex}
-    .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(10,10,12,.98);backdrop-filter:blur(20px);padding:24px var(--pad-x);gap:16px;border-bottom:1px solid var(--border);
-      padding-left:calc(var(--pad-x) + env(safe-area-inset-left));padding-right:calc(var(--pad-x) + env(safe-area-inset-right))}
+    .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(10,10,12,.98);backdrop-filter:blur(20px);padding:24px var(--pad-x);gap:16px;border-bottom:1px solid var(--border);padding-left:calc(var(--pad-x) + env(safe-area-inset-left));padding-right:calc(var(--pad-x) + env(safe-area-inset-right))}
     .nav-links.open a{padding:12px 0;font-size:14px;width:100%;border-bottom:1px solid var(--border)}
     .nav-links.open a::after{display:none}
     .stats{grid-template-columns:repeat(3,1fr)}
@@ -620,7 +341,6 @@
         <p class="lead">I'm Gunjan Kelshikar — a driven engineering student pursuing two degrees while crafting clean, responsive websites and interactive experiences through structured professional training.</p>
         <div class="hero-ctas">
           <a href="#work" class="btn btn-primary">View My Projects <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-          <!-- NEW: Download Resume Button -->
           <a href="resume.pdf" target="_blank" class="btn btn-ghost">Download Resume <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></a>
         </div>
       </div>
@@ -648,7 +368,6 @@
         <h3>Code. Create. Deploy.</h3>
         <p>I'm currently pursuing <strong style="color:var(--text)">two engineering degrees simultaneously — Civil Engineering and Computer Science & Engineering</strong>. Balancing both disciplines has sharpened my problem-solving skills and given me a unique perspective on design and structure.</p>
         
-        <!-- Visual Quote Block - Separated from regular text -->
         <div style="border-left: 3px solid var(--gold); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--gold);">
           "Just as a civil engineer never builds on weak foundations, I don't build software without clean architecture and scalable code."
         </div>
@@ -658,8 +377,8 @@
         <p>Beyond coding, I'm certified in <strong style="color:var(--text)">Advanced MS Excel and MS Word</strong>, giving me a strong foundation in data handling and documentation — skills that complement my technical work beautifully.</p>
         
         <div class="stats">
-          <div class="stat"><div class="num">4+</div><div class="lbl">Projects</div></div>
-          <div class="stat"><div class="num">4</div><div class="lbl">Deployed Live</div></div>
+          <div class="stat"><div class="num">5+</div><div class="lbl">Projects</div></div>
+          <div class="stat"><div class="num">5</div><div class="lbl">Deployed Live</div></div>
           <div class="stat"><div class="num">2</div><div class="lbl">Engg. Degrees</div></div>
         </div>
       </div>
@@ -740,7 +459,6 @@
             <span class="tech-chip">JavaScript</span>
             <span class="tech-chip">Bootstrap</span>
           </div>
-          <!-- UPDATED: Added GitHub Link -->
           <div class="project-link-group">
              <a href="https://thehungryhub.netlify.app/" target="_blank" class="project-link">Visit Live <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
              <a href="#" target="_blank" class="project-link" style="border-color:var(--muted); color:var(--muted)">View Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
@@ -766,7 +484,6 @@
             <span class="tech-chip">Canvas</span>
             <span class="tech-chip">JavaScript</span>
           </div>
-          <!-- UPDATED: Added GitHub Link -->
           <div class="project-link-group">
             <a href="https://starship-wars.netlify.app/" target="_blank" class="project-link">Play Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
             <a href="#" target="_blank" class="project-link" style="border-color:var(--muted); color:var(--muted)">View Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
@@ -792,7 +509,6 @@
             <span class="tech-chip">CSS3</span>
             <span class="tech-chip">JavaScript</span>
           </div>
-          <!-- UPDATED: Added GitHub Link -->
           <div class="project-link-group">
             <a href="https://clashofblades.netlify.app/" target="_blank" class="project-link">Play Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
             <a href="#" target="_blank" class="project-link" style="border-color:var(--muted); color:var(--muted)">View Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
@@ -800,7 +516,7 @@
         </div>
       </div>
       
-      <!-- Project 4: Ojas Skincare (UPDATED) -->
+      <!-- Project 4: Ojas Skincare -->
       <div class="project reveal" data-cat="web">
         <div class="spotlight"></div>
         <span class="num-badge">04</span>
@@ -819,18 +535,43 @@
             <span class="tech-chip">JavaScript</span>
             <span class="tech-chip">LocalStorage</span>
           </div>
-          <!-- UPDATED: Added GitHub Link -->
           <div class="project-link-group">
             <a href="https://ojas-skincare.netlify.app/" target="_blank" class="project-link">Visit Live <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
             <a href="#" target="_blank" class="project-link" style="border-color:var(--muted); color:var(--muted)">View Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
           </div>
         </div>
       </div>
-      
-      <!-- Project 5: 2D Game (Coming Soon) -->
-      <div class="project coming-soon reveal" data-cat="upcoming">
+
+      <!-- Project 5: LUXORA (NEWLY ADDED) -->
+      <div class="project reveal" data-cat="web">
         <div class="spotlight"></div>
         <span class="num-badge">05</span>
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=800&q=80" alt="LUXORA E-commerce">
+        </div>
+        <div class="project-overlay"></div>
+        <div class="thumb">LUXORA</div>
+        <div class="project-info">
+          <div class="cat">E-commerce · Live</div>
+          <h3>LUXORA - Universe of Shopping</h3>
+          <p>A premium, fully responsive e-commerce platform featuring a dynamic product catalog, persistent cart, multi-step checkout, and smooth UI animations.</p>
+          <div class="tech-chips">
+            <span class="tech-chip">HTML5</span>
+            <span class="tech-chip">CSS3</span>
+            <span class="tech-chip">JavaScript</span>
+            <span class="tech-chip">LocalStorage</span>
+          </div>
+          <div class="project-link-group">
+            <a href="https://luxora-universe-of-shopping.netlify.app/" target="_blank" class="project-link">Visit Live <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M7 7h10v10"/></svg></a>
+            <a href="#" target="_blank" class="project-link" style="border-color:var(--muted); color:var(--muted)">View Code <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project 6: 2D Game (Coming Soon) -->
+      <div class="project coming-soon reveal" data-cat="upcoming">
+        <div class="spotlight"></div>
+        <span class="num-badge">06</span>
         <div class="project-image">
           <img src="2d-game-preview.jpg" alt="2D Adventure Game">
         </div>
@@ -893,7 +634,7 @@
         <div class="year">2024 — 2025</div>
         <h3>Professional Web Development Training</h3>
         <div class="company">Intensive Guided Curriculum</div>
-        <p>Undergoing structured, mentor-led training in full-stack web development. Mastered HTML, CSS, JavaScript, Bootstrap, Python, and XAMPP through a comprehensive program — deploying 4+ live projects on Netlify along the way.</p>
+        <p>Undergoing structured, mentor-led training in full-stack web development. Mastered HTML, CSS, JavaScript, Bootstrap, Python, and XAMPP through a comprehensive program — deploying 5+ live projects on Netlify along the way.</p>
       </div>
       <div class="tl-item reveal">
         <div class="year">2024</div>
@@ -920,12 +661,12 @@
         <div class="socials">
           <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg></a>
           <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 014 0v4M12 13v4"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://www.instagram.com/_theyhates_gunjan_/" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
           <a href="#" aria-label="Netlify"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 19h20L12 2zM12 8v6M12 17v.01"/></svg></a>
         </div>
       </div>
       
-      <form class="form" id="contactForm"   action="https://formspree.io/f/mpqgllzg" method="POST">
+      <form class="form" id="contactForm" action="https://formspree.io/f/mpqgllzg" method="POST">
         <div class="form-row">
           <div class="field"><label>Your Name</label><input type="text" name="name" required placeholder="Your Name"></div>
           <div class="field"><label>Email</label><input type="email" name="email" required placeholder="you@company.com"></div>
@@ -956,7 +697,6 @@
     <div class="footer-grid">
       <p>© 2026 Gunjan Kelshikar. Crafted with passion & code.</p>
       <p>Dual Engineering · Web Developer</p>
-      <!-- <a href="#home" class="back-top">Back to top ↑</a> -->
     </div>
   </div>
 </footer>
